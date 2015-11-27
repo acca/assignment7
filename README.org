@@ -3,14 +3,14 @@
 #+DATE: 27/11/2015
 
 * Introduction
-  - Code and documentation are present at this link: https://github.com/acca/assignment6.
-  - Demo deployment available here: http://PUBLIC_IP_ADDRESS:8080/assignment7
+  - Code and documentation are present at this link: https://github.com/acca/assignment7.
+  - Demo available here: http://PUBLIC_IP_ADDRESS:8080/assignment7
   
   This application demonstrates a basic utilization of AJAX technology.
 
   I've deployed:
   - *The Servlet*: Implements =HttpServlet= which manages the clients request efficiently using threads.
-  - *The CSS file*: Control styling of the web page.
+  - *The CSS file*: Sets the default style of the web page.
   - *The Javascript file*: Downloaded and then executed from the client browser.
   - *The JSP page*: Static HTML page the browser's client access to.
 

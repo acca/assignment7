@@ -1,5 +1,5 @@
 #+AUTHOR: Daniele Santoro
-#+TITLE: Hangman game using Java Servlets
+#+TITLE: Ajax polling
 #+DATE: 27/11/2015
 
 * Introduction

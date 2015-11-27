@@ -1,6 +1,3 @@
-/**
- * 
- */
 
 function poll(){
     var xhttp;
@@ -12,8 +9,11 @@ function poll(){
     }   
     xhttp.onreadystatechange = function() {
 	  if (xhttp.readyState == 4 && xhttp.status == 200) {
-	    //document.getElementById("demo").innerHTML = xhttp.responseText;
-		console.log("response " + xhttp.responseText);
+	    document.getElementById("text").innerHTML = xhttp.responseText;
+	    payload = xhttp.responseText;
+		console.log(payload);
+		newColor = payload.substr(payload.length-7);
+		document.getElementById("demo").style.backgroundColor = newColor;
 	  }
 	};
 	xhttp.open("GET", "AjaxServlet?op=reload", true);
@@ -25,5 +25,4 @@ function poll_loop() {
     poll();
     setTimeout(function() { i++; if (i < 10) { poll_loop(); } }, 3000);
 };
-
-poll_loop();
+setTimeout(poll_loop, 5000);

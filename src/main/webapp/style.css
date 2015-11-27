@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+#demo {
+	display: block;
+	width: 99%;
+	height: 300px;
+	background-color: red;
+	border: 5px solid black;
+}
+#text {
+	font-size: large;
+	display: block;
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: green;
+}

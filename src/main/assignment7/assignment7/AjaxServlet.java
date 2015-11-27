@@ -1,7 +1,9 @@
 package assignment7;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +31,6 @@ public class AjaxServlet extends HttpServlet {
 		String operation = request.getParameter("op");		
     	String json = "";
     	PrintWriter out = response.getWriter();
-    		System.out.println(operation);
     		if (operation == null) operation = "";
     		switch (operation) {
     		case "reload":    			
@@ -44,11 +45,17 @@ public class AjaxServlet extends HttpServlet {
     	}
 	
 	private String createPayload() {
-//		JSONObject combined = new JSONObject();
-//		combined.put("exam", new JSONObject(uploadRqst));
-//		combined.put("app-instance", conf.getAppInsStatus());
-//		return combined.toString();
-		return "prova daniele";
+		Random rand = new Random();
+		float r = rand.nextFloat();
+		float g = rand.nextFloat();
+		float b = rand.nextFloat();
+		Color randomColor = new Color(r, g, b);
+		String hex = Integer.toHexString(randomColor.getRGB() & 0xffffff);
+		if (hex.length() < 6) {
+		    hex = "0" + hex;
+		}
+		hex = "#" + hex;
+		return "Paiting bottom box from server with color: " + hex;
 	}
     	
 		

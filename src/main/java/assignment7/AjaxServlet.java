@@ -55,7 +55,7 @@ public class AjaxServlet extends HttpServlet {
 		    hex = "0" + hex;
 		}
 		hex = "#" + hex;
-		return "Paiting bottom box from server with color: " + hex;
+		return "Paiting bottom box with random color from server with color: " + hex;
 	}
     	
 		

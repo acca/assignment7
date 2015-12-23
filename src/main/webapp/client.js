@@ -14,15 +14,10 @@ function poll(){
 		console.log(payload);
 		newColor = payload.substr(payload.length-7);
 		document.getElementById("demo").style.backgroundColor = newColor;
+		setTimeout(poll, 3000);
 	  }
 	};
 	xhttp.open("GET", "AjaxServlet?op=reload", true);
 	xhttp.send();	
 }
-
-i = 0;
-function poll_loop() {    
-    poll();
-    setTimeout(function() { i++; if (i < 10) { poll_loop(); } }, 3000);
-};
-setTimeout(poll_loop, 5000);
+setTimeout(poll, 5000);
